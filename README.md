@@ -82,7 +82,8 @@ _Pagination controls with query params_:
 _topics_: 
 - [Auth](#auth)
 - [profile](#profile)
-
+- [personal posts](#personal-posts)
+- [public feed](#public-feed)
 
 ### auth
 #### signup - POST */auth/v1/signup/*
