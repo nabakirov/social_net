@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY', default='secret')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool, default=False)
@@ -193,7 +193,7 @@ ABSTRACT_IP_API_KEY = config('ABSTRACT_IP_API_KEY', default=None)
 ABSTRACT_HOLIDAY_API_KEY = config('ABSTRACT_HOLIDAY_API_KEY', default=None)
 
 
-REDIS_URL = config('REDIS_URL')
+REDIS_URL = config('REDIS_URL', default='redis://localhost:6379')
 
 # celery
 CELERY_BROKER_URL = REDIS_URL
