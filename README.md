@@ -20,7 +20,7 @@ Users’ posts.
     ```
 2. Step into repo dir
     ```shell script
-    cd social_net/app
+    cd social_net
     ```
 3. Install dependencies   
     using virtualenv
