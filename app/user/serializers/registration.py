@@ -29,14 +29,14 @@ class SignUpSerializer(s.ModelSerializer):
     def validate_email(self, email):
         if m.User.objects.filter(email__iexact=email).exists():
             raise exc.Unique()
-        # api = get_abstract_api()
-        # try:
-        #     email_validator = api.email_info(email=email)
-        # except AbstractBaseException as e:
-        #     logger.exception(str(e), exc_info=True)
-        #     raise exc.TryLater()
-        # if email_validator.deliverability != 'DELIVERABLE':
-        #     raise exc.Invalid()
+        api = get_abstract_api()
+        try:
+            email_validator = api.email_info(email=email)
+        except AbstractBaseException as e:
+            logger.exception(str(e), exc_info=True)
+            raise exc.TryLater()
+        if email_validator.deliverability != 'DELIVERABLE':
+            raise exc.Invalid()
         return email
 
     password = PasswordField(required=True)
