@@ -6,6 +6,7 @@ Users’ posts.
 # TODO
 - make docker-compose file to easy deployment (PostgreSQL/NGINX/REDIS/CELERY Workers)
 - optimization of post sync with queue workers
+- configure github actions for test (install redis and run celery)
 
 ## Table of content
  - [installation](#installation)
