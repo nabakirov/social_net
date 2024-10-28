@@ -26,7 +26,7 @@ class Post(models.Model):
 
 
 class PostLike(models.Model):
-    # we do not actually need and "id" as auto incremented field for m2m relationship
+    # we do not actually need an "id" as auto incremented field for m2m relationship
     id = CompositeKey(columns=['post_id', 'user_id'])
     user = models.ForeignKey(to='user.User', null=False, on_delete=models.DO_NOTHING, related_name='like_rel')
     post = models.ForeignKey('Post', null=False, on_delete=models.DO_NOTHING, related_name='like_rel')

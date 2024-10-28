@@ -29,7 +29,6 @@ class PostFeedListSerializer(s.ModelSerializer):
 
     author = PublicProfileSerializer(read_only=True)
 
-    # todo: soft join liked factor
     liked = s.SerializerMethodField(read_only=True)
 
     def to_representation(self, instance):

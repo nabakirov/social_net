@@ -1,4 +1,7 @@
 # Social network test app
+Simple REST API based social network in Django
+where Users can sign up and create text posts, as well as view, like, and unlike other
+Users’ posts.
 
 # TODO
 - make docker-compose file to easy deployment (PostgreSQL/NGINX/REDIS/CELERY Workers)
@@ -277,6 +280,37 @@ _paginated response_ 200
 |author | obj | public user info|
 |title | str | title|
 |description | str | description, showing only 100 first symbols |
+|like_count | int8 | cached like count|
+|liked | bool | has the user liked the post|
+
+example:
+```json5
+[
+   {
+      "id": 2,
+      "create_date": "2024-10-28T15:15:00.794768Z",
+      "author": {
+         "id": 1,
+         "first_name": "",
+         "last_name": ""
+      },
+      "title": "Hello World",
+      "description": "This is a test project",
+      "like_count": 0,
+      "liked": false
+   }
+]
+```
+#### Detail view of post - GET */auth/v1/feed/{ID}/*
+##### access - *authorized*
+
+|field | data type | description|
+|- | - | -|
+|id | int8 | ID |
+|create_date | ISO str | datetime of creation|
+|author | obj | public user info|
+|title | str | title|
+|description | str | description, full text |
 |like_count | int8 | cached like count|
 |liked | bool | has the user liked the post|
 
