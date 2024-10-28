@@ -86,12 +86,12 @@ _topics_:
 
 _body_: 
 
-field | data type | description
-- | - | -
-**email** | str | valid email address
-**password** | str | password
-first_name | str | first name
-last_name| str | last name
+|field | data type | description|
+|- | - | -|
+|**email** | str | valid email address|
+|**password** | str | password|
+|first_name | str | first name|
+|last_name| str | last name|
  
 _response_ 200
 ```json5
@@ -112,10 +112,10 @@ _response_ 200
 
 _body_:
 
-field | data type | description
-- | - | -
-**email** | str | valid email address
-**password** | str | password
+|field | data type | description|
+|- | - | -|
+|**email** | str | valid email address|
+|**password** | str | password|
  
 _response_ 200
 ```json5
@@ -136,9 +136,9 @@ _response_ 200
 
 _body_:
 
-field | data type | description
-- | - | -
-**refresh** | str | refresh token
+|field | data type | description|
+|- | - | -|
+|**refresh** | str | refresh token|
  
 _response_ 200
 ```json5
@@ -166,10 +166,10 @@ _response_ 200
 ##### access - *authorized*
 _body_: 
 
-field | data type | description
-- | - | -
-first_name | str | first name
-last_name | str | last name
+|field | data type | description|
+|- | - | -|
+|first_name | str | first name|
+|last_name | str | last name|
 
 _response_ 200
 ```json5
@@ -221,8 +221,8 @@ _example_:
 
 _body_:
 
-field | data type | description
-- | - | -
+|field | data type | description|
+|- | - | -|
 |**title** | str | title|
 |**description** | str | description|
 |is_private | bool | - |
@@ -243,8 +243,8 @@ _response_ 201:
 
 _body_:
 
-field | data type | description
-- | - | -
+|field | data type | description|
+|- | - | -|
 |title | str | title|
 |description | str | description|
 |is_private | bool | - |
